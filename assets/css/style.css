@@ -308,7 +308,7 @@ select option { color: #111; }
 @media (max-width: 980px) {
   .nav-links, .header-actions .btn-secondary { display: none; }
   .mobile-toggle { display: block; }
-  .nav-links.open { display: flex; position: absolute; top: 76px; left: 18px; right: 18px; flex-direction: column; align-items: stretch; gap: 0; padding: 14px; background: rgba(17,18,22,.96); border: 1px solid var(--border-soft); border-radius: 18px; box-shadow: var(--shadow-glow); }
+  .nav-links.open { display: flex; position: absolute; top: 76px; left: 18px; right: 18px; flex-direction: column; align-items: stretch; gap: 0; padding: 14px; background: rgba(9, 9, 11, 0.98); backdrop-filter: blur(22px); border: 1px solid var(--border-soft); border-radius: 18px; box-shadow: var(--shadow-glow); }
   .nav-links.open a { padding: 14px; border-radius: 12px; }
   .nav-links.open a:hover { background: rgba(255,255,255,.05); }
   .hero-grid, .grid-2, .form-wrap, .footer-grid, .cta-band { grid-template-columns: 1fr; }
