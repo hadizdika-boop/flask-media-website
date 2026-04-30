@@ -1,4 +1,4 @@
-const WHATSAPP_URL = 'https://wa.me/971XXXXXXXXX?text=Hi%20Flask%20Media%2C%20I%27m%20interested%20in%20a%20free%20growth%20audit.';
+const WHATSAPP_URL = 'https://wa.me/971585782880?text=Hi%20Flask%20Media%2C%20I%27m%20interested%20in%20a%20free%20growth%20audit.';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-whatsapp]').forEach((el) => {
