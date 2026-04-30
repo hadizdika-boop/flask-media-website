@@ -1419,3 +1419,84 @@ select option {
     font-size: 18px;
   }
 }
+
+
+/* Final footer SVG contact icon fix */
+.footer-contact-list {
+  display: grid !important;
+  gap: 18px !important;
+}
+
+.footer-contact-item {
+  display: grid !important;
+  grid-template-columns: 24px auto !important;
+  align-items: center !important;
+  column-gap: 14px !important;
+  color: var(--text-secondary) !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+}
+
+.footer-contact-icon {
+  width: 20px !important;
+  height: 20px !important;
+  display: block !important;
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+  justify-self: center !important;
+  flex: 0 0 20px !important;
+}
+
+.footer-contact-item span {
+  display: block !important;
+}
+
+.footer-contact-item:hover,
+.footer-contact-item:hover .footer-contact-icon {
+  color: var(--text-primary) !important;
+}
+
+@media (max-width: 620px) {
+  .footer-contact-item {
+    grid-template-columns: 22px auto !important;
+    column-gap: 12px !important;
+  }
+
+  .footer-contact-icon {
+    width: 19px !important;
+    height: 19px !important;
+  }
+}
+
+
+/* Final footer spacing cleanup: remove top divider and reduce footer height */
+.site-footer {
+  padding: 42px 0 34px !important;
+}
+
+.footer-directory {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 28px !important;
+  gap: 36px !important;
+}
+
+.copyright {
+  margin-top: 24px !important;
+  padding-top: 20px !important;
+}
+
+@media (max-width: 620px) {
+  .site-footer {
+    padding: 36px 0 30px !important;
+  }
+
+  .footer-directory {
+    padding-bottom: 24px !important;
+    gap: 26px !important;
+  }
+
+  .copyright {
+    margin-top: 20px !important;
+  }
+}
