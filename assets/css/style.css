@@ -1223,12 +1223,6 @@ select option {
     rgba(0, 0, 0, .28);
 }
 
-.footer-brand {
-  display: grid;
-  gap: 16px;
-  margin-bottom: 44px;
-}
-
 .footer-directory {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1332,10 +1326,6 @@ select option {
     padding: 52px 0 36px;
   }
 
-  .footer-brand {
-    margin-bottom: 34px;
-  }
-
   .footer-directory {
     gap: 30px;
     padding: 30px 0;
@@ -1352,4 +1342,14 @@ select option {
     text-align: center;
     justify-content: center;
   }
+}
+
+
+/* Final footer cleanup: remove logo/summary area spacing */
+.footer-directory {
+  margin-top: 0;
+}
+
+.site-footer {
+  padding-top: 56px;
 }
