@@ -1214,3 +1214,36 @@ select option {
   }
 }
 
+/* Final hero cleanup: remove extra hero label spacing and move lower metric cards away from flask */
+.hero-copy {
+  gap: 24px;
+}
+
+.metric-3 {
+  left: -12px;
+  bottom: 42px;
+  animation-delay: -1.2s;
+}
+
+.metric-4 {
+  right: -18px;
+  bottom: 26px;
+  animation-delay: -1.8s;
+}
+
+@media (max-width: 620px) {
+  .hero-copy {
+    gap: 22px;
+  }
+
+  .metric-3 {
+    left: -2px;
+    bottom: 34px;
+  }
+
+  .metric-4 {
+    right: -2px;
+    bottom: 18px;
+  }
+}
+
