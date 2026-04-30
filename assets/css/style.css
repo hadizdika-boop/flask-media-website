@@ -1515,3 +1515,13 @@ select option {
   font-family: Sora, Inter, sans-serif;
   font-weight: 800;
 }
+
+
+/* Final cleanup: section labels removed, section title now uses the label text */
+.section-head h2 {
+  max-width: 900px;
+}
+
+.section-head .eyebrow {
+  display: none !important;
+}
