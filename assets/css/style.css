@@ -1367,3 +1367,55 @@ select option {
   gap: 12px;
   font-weight: 700;
 }
+
+
+/* Final footer contact icon alignment */
+.footer-contact-list {
+  gap: 18px;
+}
+
+.footer-contact-list a,
+.footer-contact-list .footer-location {
+  display: grid !important;
+  grid-template-columns: 28px auto;
+  align-items: center;
+  column-gap: 14px;
+  color: var(--text-secondary) !important;
+  font-weight: 800;
+}
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--text-secondary) !important;
+  opacity: 1;
+  font-size: 19px;
+  line-height: 1;
+  text-align: center;
+}
+
+.footer-contact-list a:hover .contact-icon,
+.footer-contact-list a:hover span {
+  color: var(--text-primary) !important;
+}
+
+.footer-contact-list a > span:last-child,
+.footer-contact-list .footer-location > span:last-child {
+  line-height: 1.35;
+}
+
+@media (max-width: 620px) {
+  .footer-contact-list a,
+  .footer-contact-list .footer-location {
+    grid-template-columns: 26px auto;
+    column-gap: 12px;
+  }
+
+  .contact-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+  }
+}
