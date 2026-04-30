@@ -1353,3 +1353,17 @@ select option {
 .site-footer {
   padding-top: 56px;
 }
+
+
+/* Final footer location visibility fix */
+.footer-location,
+.footer-location span {
+  color: var(--text-secondary) !important;
+}
+
+.footer-location {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
