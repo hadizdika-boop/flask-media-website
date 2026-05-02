@@ -1646,7 +1646,7 @@ select option {
   .hero-visual {
     min-height: 330px !important;
     padding: 10px 0 18px !important;
-    overflow: hidden !important;
+    overflow: visible !important;
   }
 
   .hero-emblem {
@@ -1671,15 +1671,17 @@ select option {
   }
 
   .hero-orb {
-    width: min(265px, 70vw) !important;
-    height: min(265px, 70vw) !important;
-    filter: blur(10px) !important;
+    width: min(330px, 86vw) !important;
+    height: min(330px, 86vw) !important;
+    filter: blur(18px) !important;
   }
 
   .signal-lines {
-    width: 100% !important;
-    height: 100% !important;
-    opacity: .34 !important;
+    inset: -42px !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    opacity: .24 !important;
   }
 
   .metric-card {
