@@ -588,17 +588,26 @@ p {
 .process-card::before {
   counter-increment: step;
   content: '0' counter(step);
+  position: relative;
+  inset: auto;
+  display: block;
+  width: max-content;
+  margin-bottom: 16px;
   font-family: Sora, sans-serif;
   font-size: 14px;
+  line-height: 1;
   font-weight: 900;
   color: transparent;
   background: var(--gradient-brand);
   -webkit-background-clip: text;
   background-clip: text;
+  opacity: 1;
+  transition: none;
+  pointer-events: none;
 }
 
 .process-card h3 {
-  margin-top: 16px;
+  margin-top: 0;
 }
 
 .cta-band {
@@ -1779,5 +1788,9 @@ select option {
 
   .stacked-title h2 span {
     display: inline;
+  }
+
+  .stacked-title h2 span:not(:last-child)::after {
+    content: " ";
   }
 }
