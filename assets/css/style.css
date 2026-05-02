@@ -1777,33 +1777,32 @@ select option {
 }
 
 @media (min-width: 981px) {
+  .stacked-feature {
+    grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
+    column-gap: clamp(44px, 5.5vw, 88px);
+    align-items: center;
+  }
+
   .grid-2 > .stacked-title {
-    align-self: start;
+    align-self: center;
+    justify-self: center;
     margin-bottom: 0;
-    max-width: 420px;
+    max-width: 360px;
   }
 
   .stacked-title h2 {
-    font-size: clamp(58px, 5vw, 78px);
-    line-height: .94;
-    letter-spacing: -0.065em;
-    max-width: none;
+    font-size: clamp(52px, 4.6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.052em;
+    max-width: 10ch;
   }
 
   .stacked-title h2 span {
     display: block;
   }
 
-  .stacked-title-what h2 {
-    max-width: 4.6ch;
-  }
-
-  .stacked-title-why h2 {
-    max-width: 5.7ch;
-  }
-
-  .stacked-title-who h2 {
-    max-width: 4.8ch;
+  .stacked-feature > :not(.stacked-title) {
+    align-self: center;
   }
 }
 
