@@ -49,8 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p>Location:<br><span>Dubai - UAE</span></p>
                     </div>
                 </aside>
-                <form class="card form-card reveal" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
-                    <!-- Replace the Formspree action URL above with your real Formspree endpoint, or replace this form with an embedded Tally form. -->
+                <form class="card form-card reveal" action="/api/contact" method="POST" data-contact-form>
                     <div class="form-grid">
                         <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text"
                                 required></div>
@@ -82,6 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="field full"><label for="message">Message</label><textarea id="message"
                                 name="message" placeholder="Tell us what you want to improve."></textarea></div>
                         <div class="field full"><button class="btn btn-primary" type="submit">Send Inquiry</button>
+                            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
                         </div>
                     </div>
                 </form>

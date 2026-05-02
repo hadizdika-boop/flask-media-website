@@ -16,6 +16,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const contactForm = document.querySelector('[data-contact-form]');
+  if (contactForm) {
+    const status = contactForm.querySelector('[data-form-status]');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (status) {
+        status.textContent = 'Sending your inquiry...';
+        status.dataset.state = 'loading';
+      }
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(contactForm),
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(result.message || 'We could not send your inquiry. Please try again.');
+        }
+
+        contactForm.reset();
+        if (status) {
+          status.textContent = result.message || 'Thanks. Your inquiry has been sent.';
+          status.dataset.state = 'success';
+        }
+      } catch (error) {
+        if (status) {
+          status.textContent = error.message;
+          status.dataset.state = 'error';
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
+    });
+  }
+
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

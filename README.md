@@ -13,7 +13,7 @@ Then open http://localhost:8000
 
 ## Update before launch
 - Replace WhatsApp number in `assets/js/main.js`
-- Replace Formspree endpoint in `contact.html`
+- Set the Cloudflare Pages secret `RESEND_API_KEY` for the `/api/contact` Resend form handler
 - Replace logo files in `assets/images/` if final SVG/PNG versions are available
 - Add GTM/GA4/Meta Pixel scripts in each page head placeholder
 
